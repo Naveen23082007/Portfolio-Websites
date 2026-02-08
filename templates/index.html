@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Naveen M</title>
+
+    <!--Style-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;500;700&display=swap" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+
+</head>
+
+<body>
+
+<header>
+<nav>
+    <h2>Naveen M</h2>
+    <ul>
+        <li><a href="#Home">Home</a></li>
+        <li><a href="#About">About</a></li>
+        <li><a href="#Skills">Skills</a></li>
+        <li><a href="#Projects">Project</a></li>
+        <li><a href="/contact">Contact</a></li>
+    </ul>
+</nav>
+</header>
+
+<main>
+
+<section id="Home" >
+    <h3>
+        Hi,<br>
+        I'm <span class="violet">Naveen</span><br>
+        Web Designer
+    </h3>
+    <img src="{{ url_for('static', filename='images/me.jpeg') }}" alt="Naveen" id="me">
+</section>
+
+<div class="contact" >
+    <button><a href="/contact" id="contact1">CONTACT</a></button> <hr>
+    <a href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn">
+        <i class="fa-brands fa-linkedin fa-2x"></i>
+    </a>
+    <a href="https://github.com" target="_blank" aria-label="GitHub">
+        <i class="fa-brands fa-github fa-2x"></i>
+    </a>
+    <a href="mailto:naveenamar23@gmail.com" aria-label="Email">
+        <i class="fa-solid fa-envelope fa-2x"></i>
+    </a>
+</div>
+
+<section id="About">
+    <h2><u>About Me</u></h2>
+    <div class="about-container">
+        <img src="{{ url_for('static', filename='images/me1.jpeg') }}" alt="About Naveen">
+        <p>
+            I am a web developer with experience in building dynamic and interactive web applications.
+            My expertise includes front-end technologies and basic back-end database concepts.
+            <br><br>
+            I believe in continuous learning and enjoy working on projects that challenge my technical
+            and logical thinking.
+        </p>
+    </div>
+</section>
+
+<section id="Skills">
+    <h2><u>Skills</u></h2>
+
+    <div class="skill-box">
+        <label><i class="fa-brands fa-html5 fa-2x" style="color: orangered; text-align: center;"></i>HTML</label>
+        <p>90%</p>
+        <input type="range" min="0" max="100" value="90" disabled>
+    </div>
+
+    <div class="skill-box">
+        <label><i class="fa-brands fa-css3-alt fa-2x" style="color: blue; text-align: center;"></i>CSS</label>
+        <p>70%</p>
+        <input type="range" min="0" max="100" value="70" disabled>
+    </div>
+
+    <div class="skill-box">
+        <label><i class="fa-brands fa-js fa-2x" style="color: yellow; text-align: center;"></i>JavaScript</label>
+        <p>50%</p>
+        <input type="range" min="0" max="100" value="50" disabled>
+    </div>
+
+    <div class="skill-box">
+        <label><i class="fa-brands fa-python fa-2x" style="  text-align: center;"></i>Python & Flask</label>
+        <p>60%</p>
+        <input type="range" min="0" max="100" value="60" disabled>
+    </div>
+
+    <div class="skill-box">
+        <label><i class="fa-solid fa-database fa-2x" style="color: rgb(1, 1, 190);"></i>MySQL</label>
+        <p>70%</p>
+        <input type="range" min="0" max="100" value="70" disabled>
+    </div>
+</section><br>
+<h2 class="pro"><u>Projects</u></h2>
+    <div id="Projects">
+            <div><h3>Calculator App</h3>
+            <a href="https://calculator-app-eta-ruddy.vercel.app" class="link">Web Link:<i class="fa-brands fa-github fa-2x"></i></a>
+            <img src="{{ url_for('static', filename='images/prg1.png') }}" class="app" >
+            </div>
+            <div>
+
+            <h3>Marksheet App</h3>
+            <a href="https://mark-sheet-calculator-app-65py.vercel.app" class="link">Web Link >><i class="fa-brands fa-github fa-2x"></i></a>
+            <img src="{{ url_for('static', filename='images/prg2.png') }}" class="app" >
+            </div>
+    </div>
+    <a href="{{ url_for('static', filename='files/resume.pdf') }}" download>
+    <button id="resume" ><i class="fa-solid fa-download"></i>Download Resume</button>
+</a>
+
+
+</main>
+<script src="{{ url_for('static', filename='script/script.js') }}"></script>
+</body>
+</html>

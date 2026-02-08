@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+</head>
+<style>
+    
+#Contact{
+    margin-top: 60%;
+    text-align: center;
+}
+#Contact h2{
+    text-align:center;
+    color:blueviolet;
+    margin-bottom:40px;
+    height: 0px;
+}
+label{
+    font-size: 125%;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+input{
+    width: 40%;
+    height: 50px;
+    border-radius:10px ;
+    padding-left: 30px;
+    font-size: 110%;
+    font-family: 'Courier New', Courier, monospace;
+    
+}
+#submit{
+     background:gainsboro;
+    color:black;
+    width:150px;
+    height:45px;
+    border-radius:8px;
+    margin-bottom:15px;
+    transition:0.3s;   
+}
+#submit:hover{
+    width: 200px;
+    height:50px;
+    background-color: blue;
+    color: whitesmoke;
+}
+textarea{
+    
+    border-radius:10px ;
+    padding-left: 30px;
+    font-size: 110%;
+    font-family: 'Courier New', Courier, monospace;
+    
+}
+</style>
+<body>
+    <form method="post">
+
+         <label>Name:</label>
+                <input type="text" name="username" placeholder="Enter your Name "> <br><br>
+
+                <label>Email:</label>
+                <input type="email" name="useremail" placeholder="Enter your Email "> <br><br>
+
+                <label>Message:</label>
+                <textarea name="message" placeholder="Enter your Message " cols="25" rows="10">
+
+                </textarea><br><br>
+                <button id="submit" >Submit</button>
+
+            </form>
+</body>
+</html>
