@@ -1,3 +1,3 @@
 function downloadResume() {
-    window.location.href = "resume.pdf";
+    window.location.href = "Resume.pdf";
 }
