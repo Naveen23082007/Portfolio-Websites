@@ -16,15 +16,22 @@
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
 
-
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 
 <body>
 
 <header>
 <nav>
-    <h2>Naveen M</h2>
-    <ul>
+    <button id="dark"  onclick="btnClick()"><i class="fa-solid fa-moon fa-1x"></i></button>
+    <button id="sun" onclick="btnClick1()" style=" background-color: white;"><i class="fa-solid fa-sun fa-1x" style="color: orangered;"></i></button>
+    <h2 data-aos="fade"
+     data-aos-easing="ease-out-sine"
+     data-aos-duration="2000">Naveen M</h2>
+    <ul data-aos="zoom-in"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="2000">
         <li><a href="#Home">Home</a></li>
         <li><a href="#About">About</a></li>
         <li><a href="#Skills">Skills</a></li>
@@ -37,23 +44,28 @@
 <main>
 
 <section id="Home" >
-    <h3>
+    
+    <h3 data-aos="fade-right"
+     data-aos-offset="300"
+     data-aos-easing="ease-in-sine">
         Hi,<br>
         I'm <span class="violet">Naveen</span><br>
-        Web Designer
+        <span id="typed"data-aos="fade-right" ></span>
     </h3>
-    <img src="{{ url_for('static', filename='images/me.jpeg') }}" alt="Naveen" id="me">
+    <img src="{{ url_for('static', filename='images/me.jpeg') }}" alt="Naveen" id="me" data-aos="zoom-out"
+     data-aos-easing="ease-out-sine"
+     data-aos-duration="2000">
 </section>
 
-<div class="contact" >
+<div class="contact" id="dark1">
     <button><a href="/contact" id="contact1">CONTACT</a></button> <hr>
     <a href="https://www.linkedin.com" target="_blank" aria-label="LinkedIn">
         <i class="fa-brands fa-linkedin fa-2x"></i>
     </a>
-    <a href="https://github.com" target="_blank" aria-label="GitHub">
+    <a href="https://github.com" target="_blank" aria-label="GitHub" >
         <i class="fa-brands fa-github fa-2x"></i>
     </a>
-    <a href="mailto:naveenamar23@gmail.com" aria-label="Email">
+    <a href="mailto:naveenamar23@gmail.com" aria-label="Email" >
         <i class="fa-solid fa-envelope fa-2x"></i>
     </a>
 </div>
@@ -62,7 +74,9 @@
     <h2><u>About Me</u></h2>
     <div class="about-container">
         <img src="{{ url_for('static', filename='images/me1.jpeg') }}" alt="About Naveen">
-        <p>
+        <p data-aos="zoom-in"
+     data-aos-easing="ease-out-sine"
+     data-aos-duration="2000">
             I am a web developer with experience in building dynamic and interactive web applications.
             My expertise includes front-end technologies and basic back-end database concepts.
             <br><br>
@@ -75,31 +89,46 @@
 <section id="Skills">
     <h2><u>Skills</u></h2>
 
-    <div class="skill-box">
+    <div class="skill-box"data-aos="zoom-in"
+     data-aos-easing="ease-out-sine"
+     data-aos-delay="300"
+     data-aos-duration="2000" >
         <label><i class="fa-brands fa-html5 fa-2x" style="color: orangered; text-align: center;"></i>HTML</label>
         <p>90%</p>
         <input type="range" min="0" max="100" value="90" disabled>
     </div>
 
-    <div class="skill-box">
+    <div class="skill-box"data-aos="fade-up"
+     data-aos-easing="ease-out-sine"
+      data-aos-delay="500"
+     data-aos-duration="2000">
         <label><i class="fa-brands fa-css3-alt fa-2x" style="color: blue; text-align: center;"></i>CSS</label>
         <p>70%</p>
         <input type="range" min="0" max="100" value="70" disabled>
     </div>
 
-    <div class="skill-box">
-        <label><i class="fa-brands fa-js fa-2x" style="color: yellow; text-align: center;"></i>JavaScript</label>
+    <div class="skill-box" data-aos="fade"
+     data-aos-easing="ease-out-sine"
+     data-aos-delay="700"
+     data-aos-duration="4000">
+        <label><i class="fa-brands fa-js fa-2x" style="color: yellow; text-align: center;" ></i>JavaScript & <i class="fa-brands fa-react fa-2x" style="color: skyblue; text-align: center;"></i>React js</label>
         <p>50%</p>
         <input type="range" min="0" max="100" value="50" disabled>
     </div>
 
-    <div class="skill-box">
+    <div class="skill-box" data-aos="fade"
+     data-aos-easing="ease-out-sine"
+     data-aos-delay="900"
+     data-aos-duration="5000">
         <label><i class="fa-brands fa-python fa-2x" style="  text-align: center;"></i>Python & Flask</label>
         <p>60%</p>
         <input type="range" min="0" max="100" value="60" disabled>
     </div>
 
-    <div class="skill-box">
+    <div class="skill-box" data-aos="fade"
+     data-aos-easing="ease-out-sine"
+     data-aos-delay="1100"
+     data-aos-duration="6000">
         <label><i class="fa-solid fa-database fa-2x" style="color: rgb(1, 1, 190);"></i>MySQL</label>
         <p>70%</p>
         <input type="range" min="0" max="100" value="70" disabled>
@@ -107,23 +136,58 @@
 </section><br>
 <h2 class="pro"><u>Projects</u></h2>
     <div id="Projects">
-            <div><h3>Calculator App</h3>
-            <a href="https://calculator-app-eta-ruddy.vercel.app" class="link">Web Link:<i class="fa-brands fa-github fa-2x"></i></a>
+        <div class="container">
+            <div data-aos="zoom-in"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="2000">
+                <h1 class="pro_name">Calculator App</h1>
+           
+            <p>A Flask-based web calculator that performs basic arithmetic operations such as addition, subtraction, multiplication, and division through a user-friendly interface. Python backend using Flask.</p>
             <img src="{{ url_for('static', filename='images/prg1.png') }}" class="app" >
+             <a href="https://calculator-app-eta-ruddy.vercel.app" class="link" target="_blank"> Calculator >> View Live <i class="fa-brands fa-github fa-1x"></i></a>
+            
             </div>
-            <div>
 
-            <h3>Marksheet App</h3>
-            <a href="https://mark-sheet-calculator-app-65py.vercel.app" class="link">Web Link >><i class="fa-brands fa-github fa-2x"></i></a>
+             <div>
+                <h1 class="pro_name">Marksheet App</h1>
+           
+            <p>A Flask-based Marksheet System is a web application designed to manage and generate student results. It allows users to input student details and subject marks, automatically calculates totals, percentages, and displays a formatted marksheet.</p>
             <img src="{{ url_for('static', filename='images/prg2.png') }}" class="app" >
+             <a href="https://mark-sheet-calculator-app-65py.vercel.app" class="link" target="_blank"> Marksheet >> View Live <i class="fa-brands fa-github fa-1x"></i></a>
+            
             </div>
+            
+             <div>
+                <h1 class="pro_name">QR Code Generator</h1>
+           
+            <p> QR code generator is such as a website link, plain text, or contact details—into a scannable, two-dimensional barcode. </p>
+            <img src="{{ url_for('static', filename='images/prg3.png') }}" class="app" >
+             <a href="https://qr-code-generator-beige-nine.vercel.app/" class="link" target="_blank">QR Code Genrator>>View Live <i class="fa-brands fa-github fa-1x"></i></a>
+            
+            </div>
+
+            </div>
+        </div>
+         
+           
     </div>
-    <a href="{{ url_for('static', filename='files/Resume.pdf') }}" download>
+    <a href="{{ url_for('static', filename='files/Resume (2).pdf') }}" download>
     <button id="resume" ><i class="fa-solid fa-download"></i>Download Resume</button>
 </a>
-
-
 </main>
+<footer>
+    <footer>
+  <p>Copyright © 2026 || All Rights Reserved.</p>
+  <div>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </div>
+</footer>
+</footer>
 <script src="{{ url_for('static', filename='script/script.js') }}"></script>
+<script>
+  AOS.init();
+</script>
 </body>
 </html>
