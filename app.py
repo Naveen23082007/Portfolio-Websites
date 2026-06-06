@@ -24,8 +24,6 @@ def init_db():
     conn.commit()
     conn.close()
 
-init_db()
-
 @app.route("/")
 def home():
     return render_template("index.html")
@@ -56,3 +54,5 @@ def view_data():
     data = conn.execute("SELECT * FROM contact").fetchall()
     conn.close()
     return render_template("view.html", data=data)
+if __name__ == "__main__":
+    app.run(debug=True)
